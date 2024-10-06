@@ -172,15 +172,15 @@
             <div class="row d_flex">
               <div class="col-md-7">
                 <div class="about_img">
-                  <figure style="width: 110%; height: 50%; overflow: hidden">
+                  <figure style="width: 100%; height: 35vh; overflow: hidden">
                     <img
                       src="images/plantveg1.webp"
                       alt="#"
                       style="
-                        width: 220%;
-                        height: auto;
+                        width: 150%;
+                        height: 100%;
                         object-fit: cover;
-                        margin-left: -10%;
+                        object-position: center;
                       "
                     />
                   </figure>
@@ -198,20 +198,24 @@
           <div
             class="add-comment"
             style="margin-top: 20px; align-items: center"
-          ><textarea id="commentText" style="
-              margin-left: 70px;
-              width: 70%;
-              height: 50px;
-              padding: 5px;
-              border: 6px solid #ccc;
-              border-radius: 14px;
-              font-size: 0.9em;
-              resize: vertical; 
-              outline: none;
-              min-height: 60px; 
-              max-height: 400px; 
-            " placeholder="Add a comment..."></textarea>
-
+          >
+            <textarea
+              id="commentText"
+              style="
+                margin-left: 70px;
+                width: 70%;
+                height: 50px;
+                padding: 5px;
+                border: 6px solid #ccc;
+                border-radius: 14px;
+                font-size: 0.9em;
+                resize: vertical;
+                outline: none;
+                min-height: 60px;
+                max-height: 400px;
+              "
+              placeholder="Add a comment..."
+            ></textarea>
 
             <button
               style="
@@ -331,7 +335,8 @@
             >
               ❤️
             </button>
-            <span class="like-count" style="margin-left: 5px">145 </span> <p style="margin-left: 5px"> likes</p>
+            <span class="like-count" style="margin-left: 5px">145 </span>
+            <p style="margin-left: 5px">likes</p>
           </div>
 
           <!-- Reaction Section 
@@ -442,11 +447,13 @@
       <div class="col-md-4 pop-it" style="margin: 0; flex: 0 0 24%">
         <div class="latest box_desho">
           <figure style="padding: 10px">
-            <img
-              src="images/drought.png"
-              alt="#"
-              style="width: 100%; height: auto; aspect-ratio: 1.5 / 1"
-            />
+            <a href="ques4.html">
+              <img
+                src="images/drought.png"
+                alt="#"
+                style="width: 100%; height: auto; aspect-ratio: 1.5 / 1"
+              />
+            </a>
           </figure>
 
           <div class="nostrud">
@@ -531,7 +538,8 @@
             >
               ❤️
             </button>
-            <span class="like-count" style="margin-left: 5px">52</span><p style="margin-left: 5px"> likes</p>
+            <span class="like-count" style="margin-left: 5px">52</span>
+            <p style="margin-left: 5px">likes</p>
           </div>
         </div>
       </div>
@@ -619,7 +627,8 @@
             >
               ❤️
             </button>
-            <span class="like-count" style="margin-left: 5px">32</span><p style="margin-left: 5px"> likes</p>
+            <span class="like-count" style="margin-left: 5px">32</span>
+            <p style="margin-left: 5px">likes</p>
           </div>
         </div>
       </div>
@@ -684,11 +693,11 @@
         likeCountElement.textContent = likeCount;
       }
     </script>
-  <!--js to clear comment -->
+    <!--js to clear comment -->
     <script>
       function clearTextarea() {
         // Clear the content of the textarea
-        document.getElementById("commentText").value = '';
+        document.getElementById("commentText").value = "";
       }
     </script>
 
