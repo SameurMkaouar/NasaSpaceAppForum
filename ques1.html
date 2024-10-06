@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
     <!-- site metas -->
-    <title>Agropro</title>
+    <title>AgriSpace</title>
+    <link rel="icon" href="icon/logoagrispace.png" type="image/gif" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -55,7 +56,7 @@
           <div class="row d_flex">
             <div class="col-md-2 col-sm-3">
               <div class="logo">
-                <a href="index.html">Agro<span>Pro</span></a>
+                <a href="index.html">Agri<span>Space</span></a>
               </div>
             </div>
             <div class="col-md-8 col-sm-9">
@@ -138,7 +139,12 @@
                 "
               >
                 <div
-                  style="display: flex; align-items: center; margin-right: 25px"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    margin-right: 25px;
+                    transform: translateY(-50px);
+                  "
                 >
                   <!-- Increased margin-right for spacing -->
                   <i
@@ -154,7 +160,13 @@
                     >1.3k</span
                   >
                 </div>
-                <div style="display: flex; align-items: center">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    transform: translateY(-50px);
+                  "
+                >
                   <i
                     class="fa fa-comment"
                     style="margin-right: 5px; margin-bottom: 15px"
@@ -163,6 +175,51 @@
                   <span style="font-weight: bold; font-size: 14px; color: black"
                     >3</span
                   >
+                </div>
+                <div
+                  class="add-comment"
+                  style="
+                    margin-top: 10px;
+                    align-items: center;
+                    transform: translateX(-650px);
+                  "
+                >
+                  <textarea
+                    id="commentText"
+                    style="
+                      margin-left: 70px;
+                      width: 70%;
+                      height: 50px;
+                      padding: 5px;
+                      border: 6px solid #ccc;
+                      border-radius: 14px;
+                      font-size: 0.9em;
+                      resize: vertical;
+                      outline: none;
+                      min-height: 60px;
+                      max-height: 400px;
+                    "
+                    placeholder="Add a comment..."
+                  ></textarea>
+
+                  <button
+                    style="
+                      background-color: #7b8723;
+                      color: white;
+                      border: none;
+                      padding: 3px 18px;
+                      border-radius: 5px;
+                      cursor: pointer;
+                      font-size: 1em;
+                      float: right;
+                      margin-left: 450px;
+                      margin-top: -55px;
+                      transform: translateX(10px);
+                    "
+                    onclick="clearTextarea()"
+                  >
+                    Post
+                  </button>
                 </div>
               </div>
             </div>
@@ -195,46 +252,6 @@
           </div>
 
           <!-- comment section -->
-          <div
-            class="add-comment"
-            style="margin-top: 20px; align-items: center"
-          >
-            <textarea
-              id="commentText"
-              style="
-                margin-left: 70px;
-                width: 70%;
-                height: 50px;
-                padding: 5px;
-                border: 6px solid #ccc;
-                border-radius: 14px;
-                font-size: 0.9em;
-                resize: vertical;
-                outline: none;
-                min-height: 60px;
-                max-height: 400px;
-              "
-              placeholder="Add a comment..."
-            ></textarea>
-
-            <button
-              style="
-                background-color: #7b8723;
-                color: white;
-                border: none;
-                padding: 3px 18px;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 1em;
-                float: right;
-                margin-left: 255px;
-                margin-top: -55px;
-              "
-              onclick="clearTextarea()"
-            >
-              Post
-            </button>
-          </div>
 
           <!-- end comment section -->
         </div>
@@ -272,7 +289,6 @@
             "
           ></i>
 
-        
           <div class="d_flex" style="display: flex; align-items: center">
             <i>
               <img
@@ -288,7 +304,7 @@
               />
             </i>
             <div class="clint">
-              <h4 style="margin: 0; font-size: 1.3em">Agropro</h4>
+              <h4 style="margin: 0; font-size: 1.3em">AgriSpace</h4>
               <span style="font-size: 1em">Admin</span>
             </div>
           </div>
@@ -311,23 +327,22 @@
               font-size: 18px;
             "
           >
-          <!-- Heart Icon -->
-          <i
-            class="fa fa-heart-o"
-            style="
-              position: absolute;
-              top: 357px; /* Position below the pin icon */
-              right: 115px;
-              color: #7b8723;
-              font-size: 27px;
-              cursor: pointer;
-            "
-            title="Like"
-            onclick="toggleLike(this)"
-          ></i>
-          <span class="like-count" style="margin-left: 5px">145 </span>
-          <p style="margin-left: 5px">likes</p>
-
+            <!-- Heart Icon -->
+            <i
+              class="fa fa-heart-o"
+              style="
+                position: absolute;
+                top: 357px; /* Position below the pin icon */
+                right: 115px;
+                color: #7b8723;
+                font-size: 27px;
+                cursor: pointer;
+              "
+              title="Like"
+              onclick="toggleLike(this)"
+            ></i>
+            <span class="like-count" style="margin-left: 5px">145 </span>
+            <p style="margin-left: 5px">likes</p>
           </div>
 
           <!-- Reaction Section 
@@ -464,7 +479,6 @@
       <!-- Second col-md-6 -->
       <div class="comment" style="margin: 0; flex: 0 0 75%; position: relative">
         <div class="custom">
-          
           <div class="d_flex" style="display: flex; align-items: center">
             <i>
               <img
@@ -506,17 +520,21 @@
             "
           >
             <!-- Heart Icon -->
-            <i class="fa fa-heart-o" style="
-                          position: absolute;
-                          top: 357px; /* Position below the pin icon */
-                          right: 107px;
-                          color: #7b8723;
-                          font-size: 27px;
-                          cursor: pointer;
-                        " title="Like" onclick="toggleLike(this)"></i>
+            <i
+              class="fa fa-heart-o"
+              style="
+                position: absolute;
+                top: 357px; /* Position below the pin icon */
+                right: 107px;
+                color: #7b8723;
+                font-size: 27px;
+                cursor: pointer;
+              "
+              title="Like"
+              onclick="toggleLike(this)"
+            ></i>
             <span class="like-count" style="margin-left: 5px">79 </span>
             <p style="margin-left: 5px">likes</p>
-
           </div>
         </div>
       </div>
@@ -548,7 +566,6 @@
       <!-- Third col-md-6 -->
       <div class="comment" style="margin: 0; flex: 0 0 75%; position: relative">
         <div class="custom">
-        
           <div class="d_flex" style="display: flex; align-items: center">
             <i>
               <img
@@ -569,26 +586,33 @@
             transplanted when all danger of frost is past.
           </p>
 
-          <div class="like-section" style="
-                        display: flex;
-                        justify-content: flex-end;
-                        align-items: center;
-                        margin-top: 10px;
-                        font-size: 18px;
-                      ">
+          <div
+            class="like-section"
+            style="
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              margin-top: 10px;
+              font-size: 18px;
+            "
+          >
             <!-- Heart Icon -->
-            <i class="fa fa-heart-o" style="
-                        position: absolute;
-                        top: 316px; /* Position below the pin icon */
-                        right: 108px;
-                        color: #7b8723;
-                        font-size: 27px;
-                        cursor: pointer;
-                      " title="Like" onclick="toggleLike(this)"></i>
+            <i
+              class="fa fa-heart-o"
+              style="
+                position: absolute;
+                top: 316px; /* Position below the pin icon */
+                right: 108px;
+                color: #7b8723;
+                font-size: 27px;
+                cursor: pointer;
+              "
+              title="Like"
+              onclick="toggleLike(this)"
+            ></i>
             <span class="like-count" style="margin-left: 5px">62 </span>
             <p style="margin-left: 5px">likes</p>
           </div>
-
         </div>
       </div>
 

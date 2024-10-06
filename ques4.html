@@ -8,7 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
     <!-- site metas -->
-    <title>Agropro</title>
+    <title>AgriSpace</title>
+    <link rel="icon" href="icon/logoagrispace.png" type="image/gif" />
+    <link rel="icon" href="images/logoagrispace.png" type="image" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -55,7 +57,7 @@
           <div class="row d_flex">
             <div class="col-md-2 col-sm-3">
               <div class="logo">
-                <a href="index.html">Agro<span>Pro</span></a>
+                <a href="index.html">Agri<span>Space</span></a>
               </div>
             </div>
             <div class="col-md-8 col-sm-9">
@@ -100,7 +102,7 @@
               <div class="d_flex" style="display: flex; align-items: center">
                 <i>
                   <img
-                    src="images/kavin.png"
+                    src="images/walker.jpg"
                     alt="#"
                     style="
                       width: 60px; /* Increased size for better visibility */
@@ -112,7 +114,7 @@
                   />
                 </i>
                 <div class="clint" style="margin-left: 10px; margin-top: 10px">
-                  <h4 style="margin: 0">Kevin Lee</h4>
+                  <h4 style="margin: 0">Joseph Walker</h4>
                   <span style="font-weight: normal; text-transform: none"
                     >Local Farmer</span
                   >
@@ -139,7 +141,12 @@
                 "
               >
                 <div
-                  style="display: flex; align-items: center; margin-right: 25px"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    margin-right: 25px;
+                    transform: translateY(-50px);
+                  "
                 >
                   <!-- Increased margin-right for spacing -->
                   <i
@@ -155,7 +162,13 @@
                     >1.7k</span
                   >
                 </div>
-                <div style="display: flex; align-items: center">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    transform: translateY(-50px);
+                  "
+                >
                   <i
                     class="fa fa-comment"
                     style="margin-right: 5px; margin-bottom: 15px"
@@ -164,6 +177,51 @@
                   <span style="font-weight: bold; font-size: 14px; color: black"
                     >3</span
                   >
+                </div>
+                <div
+                  class="add-comment"
+                  style="
+                    margin-top: 10px;
+                    align-items: center;
+                    transform: translateX(-650px);
+                  "
+                >
+                  <textarea
+                    id="commentText"
+                    style="
+                      margin-left: 70px;
+                      width: 70%;
+                      height: 50px;
+                      padding: 5px;
+                      border: 6px solid #ccc;
+                      border-radius: 14px;
+                      font-size: 0.9em;
+                      resize: vertical;
+                      outline: none;
+                      min-height: 60px;
+                      max-height: 400px;
+                    "
+                    placeholder="Add a comment..."
+                  ></textarea>
+
+                  <button
+                    style="
+                      background-color: #7b8723;
+                      color: white;
+                      border: none;
+                      padding: 3px 18px;
+                      border-radius: 5px;
+                      cursor: pointer;
+                      font-size: 1em;
+                      float: right;
+                      margin-left: 450px;
+                      margin-top: -55px;
+                      transform: translateX(10px);
+                    "
+                    onclick="clearTextarea()"
+                  >
+                    Post
+                  </button>
                 </div>
               </div>
             </div>
@@ -196,7 +254,7 @@
           </div>
 
           <!-- comment section -->
-          <div
+          <!-- <div
             class="add-comment"
             style="margin-top: 20px; align-items: center"
           >
@@ -235,7 +293,7 @@
             >
               Post
             </button>
-          </div>
+          </div> -->
 
           <!-- end comment section -->
         </div>
@@ -274,19 +332,6 @@
           ></i>
 
           <!-- Heart Icon -->
-          <i
-            class="fa fa-heart-o"
-            style="
-              position: absolute;
-              top: 65px; /* Position below the pin icon */
-              right: 20px;
-              color: #7b8723;
-              font-size: 30px;
-              cursor: pointer;
-            "
-            title="Like"
-            onclick="toggleLike(this)"
-          ></i>
 
           <div class="d_flex" style="display: flex; align-items: center">
             <i>
@@ -303,7 +348,7 @@
               />
             </i>
             <div class="clint">
-              <h4 style="margin: 0">Agropro</h4>
+              <h4 style="margin: 0">AgriSpace</h4>
               <span>Admin</span>
             </div>
           </div>
@@ -329,17 +374,21 @@
               font-size: 18px;
             "
           >
-            <button
+            <!-- Heart Icon -->
+            <i
+              class="fa fa-heart-o"
               style="
-                background: none;
-                border: none;
+                position: absolute;
+                top: 416px; /* Position below the pin icon */
+                right: 117px;
+                color: #7b8723;
+                font-size: 27px;
                 cursor: pointer;
-                font-size: 24px;
               "
-            >
-              ❤️
-            </button>
-            <span class="like-count" style="margin-left: 5px">261 </span>
+              title="Like"
+              onclick="toggleLike(this)"
+            ></i>
+            <span class="like-count" style="margin-left: 5px">145 </span>
             <p style="margin-left: 5px">likes</p>
           </div>
 
@@ -477,25 +526,10 @@
       <!-- Second col-md-6 -->
       <div class="comment" style="margin: 0; flex: 0 0 75%; position: relative">
         <div class="custom">
-          <!-- Heart Icon -->
-          <i
-            class="fa fa-heart-o"
-            style="
-              position: relative;
-              top: 0px; /* Position below the pin icon */
-              left: 765px;
-              color: #7b8723;
-              font-size: 30px;
-              cursor: pointer;
-            "
-            title="Like"
-            onclick="toggleLike(this)"
-          ></i>
-
           <div class="d_flex" style="display: flex; align-items: center">
             <i>
               <img
-                src="images/daniel.png"
+                src="images/Yusuf.png"
                 alt="#"
                 style="
                   width: 60px; /* Slightly increased size for better visibility */
@@ -507,7 +541,7 @@
               />
             </i>
             <div class="clint" style="margin-left: 15px">
-              <h4 style="margin: 0">Daniel David</h4>
+              <h4 style="margin: 0">Yusuf Hassan</h4>
               <!-- Slightly increased font size -->
               <span>Local farmer</span>
               <!-- Adjusted font size -->
@@ -533,17 +567,21 @@
               font-size: 18px;
             "
           >
-            <button
+            <!-- Heart Icon -->
+            <i
+              class="fa fa-heart-o"
               style="
-                background: none;
-                border: none;
+                position: absolute;
+                top: 356px; /* Position below the pin icon */
+                right: 107px;
+                color: #7b8723;
+                font-size: 27px;
                 cursor: pointer;
-                font-size: 24px;
               "
-            >
-              ❤️
-            </button>
-            <span class="like-count" style="margin-left: 5px">78</span>
+              title="Like"
+              onclick="toggleLike(this)"
+            ></i>
+            <span class="like-count" style="margin-left: 5px">87 </span>
             <p style="margin-left: 5px">likes</p>
           </div>
         </div>
@@ -576,31 +614,16 @@
       <!-- Third col-md-6 -->
       <div class="comment" style="margin: 0; flex: 0 0 75%; position: relative">
         <div class="custom">
-          <!-- Heart Icon -->
-          <i
-            class="fa fa-heart-o"
-            style="
-              position: relative;
-              top: 0px; /* Position below the pin icon */
-              left: 765px;
-              color: #7b8723;
-              font-size: 30px;
-              cursor: pointer;
-            "
-            title="Like"
-            onclick="toggleLike(this)"
-          ></i>
-
           <div class="d_flex" style="display: flex; align-items: center">
             <i>
               <img
-                src="images/maya.png"
+                src="images/nicholas.png"
                 alt="#"
                 style="width: 50px; height: 50px; border: 3px solid #7b8723"
               />
             </i>
             <div class="clint" style="margin-left: 15px">
-              <h4 style="margin: 0">Maya Bennett</h4>
+              <h4 style="margin: 0">Nicholas Henry</h4>
               <span>Local Farmer</span>
             </div>
           </div>
@@ -622,17 +645,21 @@
               font-size: 18px;
             "
           >
-            <button
+            <!-- Heart Icon -->
+            <i
+              class="fa fa-heart-o"
               style="
-                background: none;
-                border: none;
+                position: absolute;
+                top: 318px; /* Position below the pin icon */
+                right: 107px;
+                color: #7b8723;
+                font-size: 27px;
                 cursor: pointer;
-                font-size: 24px;
               "
-            >
-              ❤️
-            </button>
-            <span class="like-count" style="margin-left: 5px">44</span>
+              title="Like"
+              onclick="toggleLike(this)"
+            ></i>
+            <span class="like-count" style="margin-left: 5px">38 </span>
             <p style="margin-left: 5px">likes</p>
           </div>
         </div>
