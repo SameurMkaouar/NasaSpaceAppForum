@@ -198,21 +198,20 @@
           <div
             class="add-comment"
             style="margin-top: 20px; align-items: center"
-          >
-            <textarea
-              style="
-                margin-left: 70px;
-                width: 70%;
-                height: 50px;
-                padding: 5px;
-                border: 6px solid #ccc;
-                border-radius: 14px;
-                font-size: 1em;
-                resize: none;
-                outline: none;
-              "
-              placeholder="Add a comment..."
-            ></textarea>
+          ><textarea id="commentText" style="
+              margin-left: 70px;
+              width: 70%;
+              height: 50px;
+              padding: 5px;
+              border: 6px solid #ccc;
+              border-radius: 14px;
+              font-size: 0.9em;
+              resize: vertical; 
+              outline: none;
+              min-height: 60px; 
+              max-height: 400px; 
+            " placeholder="Add a comment..."></textarea>
+
 
             <button
               style="
@@ -224,9 +223,10 @@
                 cursor: pointer;
                 font-size: 1em;
                 float: right;
-                margin-left: 250px;
-                margin-top: -50px;
+                margin-left: 255px;
+                margin-top: -55px;
               "
+              onclick="clearTextarea()"
             >
               Post
             </button>
@@ -331,7 +331,7 @@
             >
               ❤️
             </button>
-            <span class="like-count" style="margin-left: 5px">145 likes</span>
+            <span class="like-count" style="margin-left: 5px">145 </span> <p style="margin-left: 5px"> likes</p>
           </div>
 
           <!-- Reaction Section 
@@ -443,7 +443,7 @@
         <div class="latest box_desho">
           <figure style="padding: 10px">
             <img
-              src="images/news2.jpg"
+              src="images/drought.png"
               alt="#"
               style="width: 100%; height: auto; aspect-ratio: 1.5 / 1"
             />
@@ -459,7 +459,7 @@
               If you notice that your crops have yellowing leaves, or are
               growing slowly, may this blog post help you.
             </p>
-            <a class="read_more" href="ques1.html">Read More</a>
+            <a class="read_more" href="ques4.html">Read More</a>
           </div>
         </div>
       </div>
@@ -531,7 +531,7 @@
             >
               ❤️
             </button>
-            <span class="like-count" style="margin-left: 5px">52 likes</span>
+            <span class="like-count" style="margin-left: 5px">52</span><p style="margin-left: 5px"> likes</p>
           </div>
         </div>
       </div>
@@ -541,7 +541,7 @@
         <div class="latest box_desho">
           <figure style="padding: 10px">
             <img
-              src="images/news2.jpg"
+              src="images/patterns.png"
               alt="#"
               style="width: 100%; height: auto; aspect-ratio: 1.5 / 1"
             />
@@ -555,7 +555,7 @@
               If you notice unusual growth patterns in your crops, you may want
               to read this blog post.
             </p>
-            <a class="read_more" href="ques1.html">Read More</a>
+            <a class="read_more" href="ques6.html">Read More</a>
           </div>
         </div>
       </div>
@@ -619,7 +619,7 @@
             >
               ❤️
             </button>
-            <span class="like-count" style="margin-left: 5px">32 likes</span>
+            <span class="like-count" style="margin-left: 5px">32</span><p style="margin-left: 5px"> likes</p>
           </div>
         </div>
       </div>
@@ -629,7 +629,7 @@
         <div class="latest box_desho">
           <figure style="padding: 10px">
             <img
-              src="images/news2.jpg"
+              src="images/flood.png"
               alt="#"
               style="width: 100%; height: auto; aspect-ratio: 1.5 / 1"
             />
@@ -645,7 +645,7 @@
               If you're fearing floods in your farming area, you should read
               this post.
             </p>
-            <a class="read_more" href="ques1.html">Read More</a>
+            <a class="read_more" href="ques3.html">Read More</a>
           </div>
         </div>
       </div>
@@ -682,6 +682,13 @@
 
         // Update the like count in the UI
         likeCountElement.textContent = likeCount;
+      }
+    </script>
+  <!--js to clear comment -->
+    <script>
+      function clearTextarea() {
+        // Clear the content of the textarea
+        document.getElementById("commentText").value = '';
       }
     </script>
 
